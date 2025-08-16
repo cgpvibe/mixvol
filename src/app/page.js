@@ -4,6 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
+      <img src="/img/study/blend.jpg" alt="" />
       <div className='container grid grid-cols-2 grid-rows-2 gap-8'>
         <div className='row-span-2'>
           <MainSwiper />
