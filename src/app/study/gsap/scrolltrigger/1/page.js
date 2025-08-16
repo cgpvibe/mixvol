@@ -21,7 +21,7 @@ export default function Page() {
       scrollTrigger: {
         trigger: boxRef.current, // 애니메이션을 시작할 요소
         start: 'top center', // 애니메이션 시작 지점 (트리거 요소의 상단이 뷰포트의 중앙에 올 때)
-        end: 'bottom top', // 애니메이션 종료 지점 (트리거 요소의 하단이 뷰포트의 상단에 올 때)
+        end: 'bottom center', // 애니메이션 종료 지점 (트리거 요소의 하단이 뷰포트의 상단에 올 때)
         scrub: true, // 스크롤에 따라 애니메이션 진행 (값: true 또는 숫자)
         markers: true, // 디버깅을 위한 마커 표시
       },
