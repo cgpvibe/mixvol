@@ -9,7 +9,7 @@ export default function Home() {
           <MainSwiper />
         </div>
         <div className="bg-blue-500 p-4">Item 3</div>
-        <div className="bg-blue-500 p-4">Item 4</div>
+        <div className="bg-green-500 p-4">Item 4</div>
       </div>
     </div>
   );

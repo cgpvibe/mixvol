@@ -32,12 +32,12 @@ export default function MainSwiper() {
         onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide>
-          <div className="bg-blue-500 text-white flex items-center justify-center p-20">
+          <div className="bg-gray-500 text-white flex items-center justify-center p-20 aspect-square">
             Slide 1
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-red-500 text-white flex items-center justify-center p-20">
+          <div className="bg-purple-500 text-white flex items-center justify-center p-20 aspect-square">
             Slide 2
           </div>
         </SwiperSlide>
