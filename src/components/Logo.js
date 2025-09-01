@@ -1,18 +1,21 @@
+// components/Logo.js
+"use client";
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
+import { useTransitionStore } from "@/store/transition"; // zustand 스토어 불러오기
 
-export default function Logo({ width = 180, height = 38, className = '', href = '/', inverted = true }) {
+export default function Logo({ className = '', href = '/', inverted = true, alt = "Mixvol" }) {
+  const setTargetPath = useTransitionStore((s) => s.setTargetPath);
   return (
-    <Link href={href} className={`${className} `}>
+    <div onClick={() => setTargetPath(href)} href={href} className={`relative block h-full cursor-pointer ${className} `}>
       <Image
-        className={`${inverted ? 'invert' : ''} `}
+        className={`${inverted ? 'invert' : ''} object-contain`}
         src="/img/logo/mixvol.svg"
-        alt="Mixvol" // alt 텍스트도 프롭스로 받는 것을 고려해볼 수 있습니다.
-        width={width}    // 프롭스로 받은 width 값 사용
-        height={height}  // 프롭스로 받은 height 값 사용
+        alt={alt}
+        fill
+        sizes="(max-width: 768px) 100px, 150px"
         priority
       />
-    </Link>
+    </div>
   );
 }

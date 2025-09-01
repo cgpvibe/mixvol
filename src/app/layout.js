@@ -1,17 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// app/layout.js
+
 import "./globals.css";
 import './custom.css';
 import Header from '@/components/Header';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import PageTransition from '@/components/PageTransition';
 
 export const metadata = {
   title: "Create Next App",
@@ -20,10 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pt-0`}
-      >
+    <html lang="ko">
+      <body className={`antialiased pt-0 font-pretendard`}>
+        <PageTransition />
         <Header />
         {children}
       </body>
