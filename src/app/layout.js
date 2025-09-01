@@ -4,6 +4,7 @@ import "./globals.css";
 import './custom.css';
 import Header from '@/components/Header';
 import PageTransition from '@/components/PageTransition';
+import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,9 +15,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko">
       <body className={`antialiased pt-0 font-pretendard`}>
-        <PageTransition />
-        <Header />
-        {children}
+        {/* 스크롤 스무더 적용 */}
+        <SmoothScroll />
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            <PageTransition />
+            <Header />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

@@ -44,7 +44,7 @@ export default function PageTransition() {
 
   return (
     <div
-      className="transition-overlay fixed top-0 left-0 w-full h-full bg-black"
+      className="transition-overlay fixed top-0 left-0 w-full h-full bg-green-300"
       style={{ transform: "translateY(-100%)", zIndex: -1 }}
     />
   );
